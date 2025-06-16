@@ -1,46 +1,86 @@
 
 import { Button } from "@/components/ui/button";
-import { Sparkles, Rocket } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
+      <div className="text-center max-w-4xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            AI-Powered Decentralized
+            <br />
+            <span style={{ color: '#1AECED' }}>Compute Powered by You</span>
+          </h1>
+          
+          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Experience the future of decentralized computing with our revolutionary 
+            AI-powered blockchain platform
+          </p>
+        </div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <div className="flex items-center justify-center mb-6">
-          <Sparkles className="w-8 h-8 text-blue-400 mr-3 animate-pulse" />
-          <span className="text-blue-400 text-lg font-semibold tracking-wide">SOLANA ECOSYSTEM</span>
+        {/* Central 3D visualization placeholder */}
+        <div className="relative mb-12">
+          <div className="w-80 h-80 mx-auto relative">
+            <div className="absolute inset-0 rounded-full border-2 border-[#1AECED]/30 animate-spin-slow"></div>
+            <div className="absolute inset-4 rounded-full border border-[#20A5EF]/40 animate-pulse"></div>
+            <div className="absolute inset-8 rounded-full bg-gradient-to-r from-[#1AECED]/20 to-[#20A5EF]/20 flex items-center justify-center">
+              <div className="w-32 h-32 bg-[#1AECED]/30 rounded-full flex items-center justify-center">
+                <div className="text-4xl font-bold text-white">AI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Countdown Timer */}
+        <div className="bg-black/30 backdrop-blur border border-[#1AECED]/30 rounded-2xl p-8 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold text-white mb-6">Dynamic Pricing Alert</h3>
+          <div className="grid grid-cols-4 gap-4 text-center">
+            <div>
+              <div className="text-4xl font-bold text-[#1AECED]">00</div>
+              <div className="text-white/60 text-sm">DAYS</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-[#1AECED]">14</div>
+              <div className="text-white/60 text-sm">HOURS</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-[#1AECED]">32</div>
+              <div className="text-white/60 text-sm">MINUTES</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-[#1AECED]">18</div>
+              <div className="text-white/60 text-sm">SECONDS</div>
+            </div>
+          </div>
+          <p className="text-white/80 text-sm mt-4">To next price increase</p>
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6 leading-tight">
-          AI-Powered<br />
-          <span className="text-blue-400">Decentralized</span><br />
-          Computing Network
-        </h1>
-        
-        <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Experience the future of decentralized computing with our revolutionary AI-powered blockchain platform built on Solana
-        </p>
-        
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg rounded-full">
-            <Rocket className="w-5 h-5 mr-2" />
-            Join Presale
+          <Button 
+            size="lg" 
+            className="bg-[#1AECED] text-[#06115D] hover:bg-[#20A5EF] px-8 py-4 text-lg rounded-full font-semibold"
+          >
+            Join Public Presale Phase 1
           </Button>
-          <Button variant="outline" size="lg" className="border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 text-lg rounded-full">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-[#1AECED] text-[#1AECED] hover:bg-[#1AECED]/10 px-8 py-4 text-lg rounded-full"
+          >
             Learn More
           </Button>
         </div>
 
-        {/* Floating elements */}
-        <div className="absolute top-10 right-10 w-20 h-20 border border-blue-400/30 rounded-lg animate-spin-slow opacity-50" />
-        <div className="absolute bottom-20 left-10 w-16 h-16 border border-purple-400/30 rounded-full animate-bounce opacity-50" />
+        {/* Exchange listings */}
+        <div className="mt-12">
+          <p className="text-white/60 text-sm mb-4">Confirmed exchange listings</p>
+          <div className="flex justify-center items-center space-x-8">
+            <div className="text-white/80 font-semibold">MEXC</div>
+            <div className="text-white/80 font-semibold">Bitmart</div>
+            <div className="text-white/80 font-semibold">Uniswap</div>
+            <div className="text-white/80 font-semibold">1inch</div>
+          </div>
+        </div>
       </div>
     </section>
   );

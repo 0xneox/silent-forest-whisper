@@ -62,7 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for the AI Compute theme
+				'ai-navy': '#06115D',
+				'ai-cyan': '#1AECED',
+				'ai-teal': '#036165',
+				'ai-blue': '#20A5EF'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -89,12 +94,27 @@ export default {
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '0.6',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						opacity: '1',
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'spin-slow': 'spin-slow 3s linear infinite'
+				'spin-slow': 'spin-slow 3s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-ai': 'linear-gradient(180deg, #06115D 0%, #036165 50%, #20A5EF 100%)',
+				'gradient-ai-reverse': 'linear-gradient(0deg, #06115D 0%, #036165 50%, #20A5EF 100%)'
 			}
 		}
 	},
