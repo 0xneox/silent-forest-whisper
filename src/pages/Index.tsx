@@ -14,15 +14,13 @@ import TrustSignals from "@/components/TrustSignals";
 
 const Index = () => {
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(180deg, #06115D 0%, #036165 50%, #20A5EF 100%)' }}>
+    <div className="min-h-screen bg-gradient-to-b from-[#06115D] via-[#036165] to-[#20A5EF]">
       <div className="relative">
-        {/* Background pattern */}
-        <div className="fixed inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, #1AECED 0%, transparent 50%),
-                             radial-gradient(circle at 75% 75%, #20A5EF 0%, transparent 50%),
-                             radial-gradient(circle at 50% 50%, #036165 0%, transparent 70%)`
-          }} />
+        {/* Background effects */}
+        <div className="fixed inset-0 opacity-20 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-radial from-[#1AECED]/20 via-transparent to-transparent"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#20A5EF]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#1AECED]/10 rounded-full blur-3xl"></div>
         </div>
         
         <Navbar />
